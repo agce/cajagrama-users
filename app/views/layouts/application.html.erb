@@ -7,40 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- NAVBAR -->
-    <div class="navbar-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <a href="http://www.cajagrama.com/" id="logo-nav"><%= image_tag("logo-nav.svg") %></a>
-                    <%= image_tag("menu-nav.svg", id: "menu-open") %>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--== end NAVBAR ==-->
-    
-    <!-- HIDDEN MENU -->
-    <div id="background-menu-hidden"></div>
-    <div class="animated" id="menu-oculto">
-        <div class="menu-hidden-center-container">
-            <div class="menu-hidden-center">
-                <%= image_tag("logo-nav.svg") %>
-                <a href="/">Inicio</a>
-                <a href="http://www.cajagrama.com/munchie-mania.php">Munchie-mania</a>
-                <a href="http://www.cajagrama.com/infusion.php">Infusion</a>
-                <a href="http://www.cajagrama.com/lolamaria.php">Lola Maria</a>
-                <div id="redes-sociales-menu">
-                    <a href="https://www.facebook.com/cajagrama" target="_blank"><%= image_tag("facebook.svg") %></a>
-                    <a href="https://www.instagram.com/cajagrama" target="_blank"><%= image_tag("instagram.svg") %></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <%= image_tag("close.svg", id: "close-menu") %>
-    
-    <!--== end HIDDEN MENU ==-->
+  
+  <%= render 'layouts/header' %>
 
 <%= yield %>
 
