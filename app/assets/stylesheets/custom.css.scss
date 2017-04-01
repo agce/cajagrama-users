@@ -4,9 +4,9 @@
 
 body
 {
+    font-family:                 'Roboto', sans-serif;
     background:                  #eaeaea;
 }
-
 /*-- NAVBAR --*/
 .navbar-container
 {
@@ -27,7 +27,8 @@ body
     position:                    relative;
     height:                      30px;
     width:                       185px;
-    margin-left:                 15px;
+    margin-left:                 auto;
+    margin-right:                auto;
 }
 #logo-nav img
 {
@@ -149,3 +150,93 @@ body
     opacity:                     0.75;
 }
 /*--== end NAVBAR ==--*/
+
+.btn-suscribe
+{
+    display:                     block;
+    position:                    relative;
+    width:                       170px;
+    height:                      auto;
+    padding-top:                 15px;
+    padding-bottom:              15px;
+    border-radius:               25px;
+    text-align:                  center;
+    margin:                      50px auto;
+    font-size:                   16px;
+    font-weight:                 700;
+    border:                      none;
+}
+.btn-yellow-white
+{
+    background:                  #ffa92e;
+    color:                       #FFF;
+}
+.btn-yellow-white:hover
+{
+    background:                  #FFF;
+    color:                       #ffa92e;
+}
+
+
+/*-- RUBY ELEMENTS --*/
+.general-margin
+{
+    margin-top:                  100px
+}
+.suscription-list-tile
+{
+    border-bottom:               1px solid #ccc;
+    padding-top:                 10px;
+    padding-bottom:              10px;
+}
+.suscription-list-tile:hover
+{
+    background:                  #FFF;
+}
+.input-form-style, #suscription_ciudad, #suscription_estado, #suscription_nombre, #suscription_estatus, #email, #password
+{
+    display:                     block;
+    position:                    relative;
+    width:                       100%;
+    height:                      60px;
+    background:                  #FFF;
+    border:                      1px solid #ccc;
+    font-size:                   16px;
+    padding:                     5px 10px;
+}
+.label-form
+{
+    display:                    block;
+    position:                   relative;
+    font-size:                  14px;
+    font-weight:                500;
+}
+.titles
+{
+    display:                    block;
+    position:                   relative;
+    margin-bottom:              50px;
+    font-size:                  24px;
+    font-weight:                700;
+    color:                      333;
+}
+.show-data
+{
+    display:                    block;
+    position:                   relative;
+    width:                      100%;
+    height:                     auto;
+    padding:                    10px;
+    background:                 #FFF;
+    font-size:                  16px;
+    margin-top:                 5px;
+}
+/*==-- end RUBY --==*/
+
+@media (min-width: 992px) {
+    .btn-suscribe
+    {
+        width:                        220px;
+    }
+
+}

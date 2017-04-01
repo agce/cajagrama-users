@@ -1,0 +1,23 @@
+<div class="container general-margin">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+            <h1 class="titles"><%= @suscription.nombre %> - [Suscription id: <%= @suscription.id %>]</h1>
+            
+                <div class="show-data">Cliente: <%= @suscription.username %></div>
+                <div class="show-data">Correo de cliente: <%= @suscription.email %></div>
+                <div class="show-data">Direccion: <%= @suscription.direccion %></div>
+                <div class="show-data">Colonia: <%= @suscription.colonia %></div>
+                <div class="show-data">C&oacute;digo postal: <%= @suscription.cp %></div>
+                <div class="show-data">Ciudad: <%= @suscription.ciudad %></div>
+                <div class="show-data">Estado: <%= @suscription.estado %></div>
+                <div class="show-data">Tel&eacute;fono: <%= @suscription.telefono %></div><br>
+                <div class="show-data">Shipping date: <%= @suscription.shippingdate %></div><br>
+                <div class="show-data">Suscripci&oacute;n activa desde: <%= @suscription.created_at %></div>
+                <div class="show-data">Suscripci&oacute;n modificada por &uacute;ltima vez: <%= @suscription.updated_at %></div><br>
+                <div class="show-data">Estatus de suscripci&oacute;n: <%= @suscription.estatus %></div><br>
+                <div class="show-data">Precio: <%= @suscription.precio %></div>
+            
+            <%= link_to "Regresar", suscriptions_path, class: "btn btn-warning" %> <%= link_to "Editar", edit_suscription_path, class: "btn btn-warning" %>
+        </div>
+    </div>
+</div>

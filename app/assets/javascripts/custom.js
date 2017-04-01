@@ -1,4 +1,4 @@
-
+$(document).ready(function(){
    $banderamenu = 0;
    
     $('#menu-open').click(function(){
@@ -24,3 +24,4 @@
         });
         $banderamenu = 1;
     });
+});

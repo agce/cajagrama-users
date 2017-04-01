@@ -1,0 +1,19 @@
+<div class="container general-margin">
+    <h1 class="text-center titles">Suscripciones</h1>
+    <p class="text-center"><%= link_to "Cerrar sesion", logout_path %></p>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">Caja</div>
+        <div class="col-xs-6 col-md-3">Actualizacion</div>
+        <div class="col-xs-6 col-md-3">Estatus</div>
+        <div class="col-xs-6 col-md-3">Correo electr&oacute;nico</div>
+    </div>
+    <% @suscriptions.each do |suscription| %>
+    <%= link_to suscription_path(suscription) do %><div class="row suscription-list-tile">
+        <div class="col-xs-6 col-md-3"><%= suscription.nombre %></div>
+        <div class="col-xs-6 col-md-3"><%= time_ago_in_words(suscription.updated_at) %> ago</div>
+        <div class="col-xs-6 col-md-3"><%= suscription.estatus %></div>
+        <div class="col-xs-6 col-md-3"><%= suscription.email %></div>
+    </div>
+    <% end %>
+    <% end %>
+</div>

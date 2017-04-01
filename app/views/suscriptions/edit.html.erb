@@ -1,0 +1,80 @@
+<div class="container general-margin">
+    <div class="row">
+        <h1 class="text-center titles">Editar suscripci&oacute;n</h1>
+        <% if @suscription.errors.any? %>
+            <h5>Por favor llena todos los campos.</h5>
+            <ul>
+            <% @suscription.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+            </ul>
+        <% end %>
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 form-container">
+            <%= form_for (@suscription) do |f| %>
+                <div class="col-md-4 col-xs-12">
+                    <h3 class="label-form">Estatus:</h3>
+                    <%= f.select :estatus, [['Pago pendiente','Pago pendiente'],['Activo','Activo'],['Pausado','Pausado'],['Cancelado', 'Cancelado']] %>
+                </div>
+                
+                <div class="col-md-4 col-xs-12">
+                    <h3 class="label-form">Precio:</h3>
+                    <%= f.number_field :precio, class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-md-4 col-xs-12">
+                    <h3 class="label-form">Día de Shipping:</h3>
+                    <%= f.number_field :shippingdate, class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12">
+                    <h3 class="label-form">Nombre completo:</h3>
+                    <%= f.text_field :username, class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12">
+                    <h3 class="label-form">Correo elect&oacute;nico:</h3>
+                    <%= f.email_field :email, class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12">
+                    <h3 class="label-form">Calle y n&uacute;mero:</h3>
+                    <%= f.text_field :direccion, class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12">
+                    <h3 class="label-form">Colonia:</h3>
+                    <%= f.text_field :colonia, class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12 col-md-6">
+                    <h3 class="label-form">Ciudad:</h3>
+                    <%= f.select :ciudad, [['Mexicali','Mexicali']], class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12 col-md-6">
+                    <h3 class="label-form">Estado:</h3>
+                    <%= f.select :estado, [['Baja California','Baja California']], class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12 col-md-6">
+                    <h3 class="label-form">C&oacute;digo Postal:</h3>
+                    <%= f.number_field :cp, class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12 col-md-6">
+                    <h3 class="label-form">Tel&eacute;fono:</h3>
+                    <%= f.telephone_field :telefono, class: 'input-form-style' %>
+                </div>
+                
+                <div class="col-xs-12">
+                    <h3 class="label-form">Selecciona la caja a la que deseas suscribirte:</h3>
+                    <%= f.select :nombre, [['Munchie-mania','Munchie-mania'],['Infusion','Infusion'],['Lola Maria', 'Lola Maria']] %>
+                </div>
+                
+                <div class="col-xs-12">
+                    <%= f.submit 'Actualizar', class: "btn-suscribe btn-yellow-white"%>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -11,14 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401062239) do
+ActiveRecord::Schema.define(version: 20170401105812) do
 
   create_table "suscriptions", force: :cascade do |t|
-    t.string  "nombre"
-    t.string  "estatus"
-    t.integer "precio"
-    t.integer "shippingdate"
-    t.integer "user_id"
+    t.string   "nombre"
+    t.string   "estatus"
+    t.integer  "precio"
+    t.integer  "shippingdate"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "username"
+    t.string   "email"
+    t.string   "direccion"
+    t.string   "colonia"
+    t.string   "ciudad"
+    t.string   "estado"
+    t.string   "cp"
+    t.string   "telefono"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170401062239) do
     t.string   "estatus"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end
