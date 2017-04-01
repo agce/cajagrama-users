@@ -1,0 +1,151 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body
+{
+    background:                  #eaeaea;
+}
+
+/*-- NAVBAR --*/
+.navbar-container
+{
+    display:                     block;
+    position:                    fixed;
+    width:                       100%;
+    height:                      auto;
+    background:                  #FFF;
+    padding-top:                 25px;
+    padding-bottom:              25px;
+    z-index:                     99;
+    top:                         0;
+    left:                        0;
+}
+#logo-nav
+{
+    display:                     block;
+    position:                    relative;
+    height:                      30px;
+    width:                       185px;
+    margin-left:                 15px;
+}
+#logo-nav img
+{
+    height:                      30px;
+    width:                       auto;
+}
+#menu-open
+{
+    display:                     block;
+    position:                    absolute;
+    right:                       25px;
+    top:                         5px;
+    width:                       35px;
+    height:                      auto;
+}
+#menu-open:hover, #logo-nav:hover
+{
+    cursor:                      pointer;
+    opacity:                     0.75;
+}
+#background-menu-hidden
+{
+    display:                     none;
+    position:                    fixed;
+    background:                  rgba(255,255,255,0.95);
+    left:                        0;
+    top:                         0;
+    right:                       0;
+    bottom:                      0;
+    z-index:                     999;
+    opacity:                     0;
+    transition:                  opacity 1500ms ease-in-out;
+    -webkit-transition:          opacity 1500ms ease-in-out;
+    -moz-transition:             opacity 1500ms ease-in-out;
+    -o-transition:               opacity 1500ms ease-in-out;
+}
+#menu-oculto
+{
+    display:                     none;
+    position:                    fixed;
+    width:                       100%;
+    height:                      100%;
+    top:                         0;
+    right:                       0;
+    bottom:                      0;
+    z-index:                     9999;
+}
+.menu-hidden-center-container
+{
+    display:                     block;
+    position:                    relative;
+    width:                       100%;
+    height:                      100%;
+}
+.menu-hidden-center
+{
+    position:                    absolute;
+    top:                         50%;
+    left:                        50%;
+    transform:                   translate(-50%, -50%);
+}
+.menu-hidden-center img
+{
+    display:                     block;
+    position:                    relative;
+    width:                       200px;
+    height:                      auto;
+    margin-left:                 auto;
+    margin-right:                auto;
+    margin-bottom:               25px;
+}
+.menu-hidden-center a
+{
+    display:                     block;
+    position:                    relative;
+    font-size:                   24px;
+    font-weight:                 700;
+    color:                       #bf001e;
+    text-align:                  center;
+    margin-bottom:               5px;
+}
+#redes-sociales-menu
+{
+    display:                     block;
+    position:                    relative;
+    width:                       124px;
+    height:                      auto;
+    margin-top:                  25px;
+    margin-left:                 auto;
+    margin-right:                auto;
+}
+#redes-sociales-menu a
+{
+    display:                     inline-block;
+    position:                    relative;
+    width:                       50px;
+    height:                      auto;
+    margin-left:                 5px;
+    margin-right:                5px;
+}
+#redes-sociales-menu a img
+{
+    width:                       50px;
+    height:                      50px;
+}
+#close-menu
+{
+    display:                     none;
+    position:                    fixed;
+    width:                       20px;
+    height:                      auto;
+    right:                       50px;
+    top:                         50px;
+    z-index:                     10001;
+}
+#close-menu:hover
+{
+    cursor:                      pointer;
+    opacity:                     0.75;
+}
+/*--== end NAVBAR ==--*/
