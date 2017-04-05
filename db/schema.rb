@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401105812) do
+ActiveRecord::Schema.define(version: 20170405050911) do
 
   create_table "suscriptions", force: :cascade do |t|
     t.string   "nombre"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170401105812) do
     t.string   "estado"
     t.string   "cp"
     t.string   "telefono"
+    t.string   "suscription_type"
   end
 
   create_table "users", force: :cascade do |t|
