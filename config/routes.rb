@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   resources :suscriptions
   
+  get '/new-mamamia', to: 'suscriptions#newmamamia'
+  post '/new-mamamia', to: 'suscriptions#create'
+  
   get '/admin', to: "logins#new"
   post '/admin', to: "logins#create"
   get '/logout', to: "logins#destroy"

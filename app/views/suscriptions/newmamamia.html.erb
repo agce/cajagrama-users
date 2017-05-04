@@ -42,46 +42,43 @@
                     <%= f.select :estado, [['Baja California','Baja California']], class: 'input-form-style' %>
                 </div>
                 
-                <div class="col-xs-12 col-md-6">
-                    <h3 class="label-form">C&oacute;digo Postal:</h3>
-                    <%= f.number_field :cp, class: 'input-form-style', placeholder: "Código postal" %>
-                </div>
-                
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12">
                     <h3 class="label-form">Tel&eacute;fono (con lada):</h3>
                     <%= f.telephone_field :telefono, class: 'input-form-style', placeholder: "Teléfono con lada" %>
                 </div>
                 
                 <div class="col-xs-12">
+                    <h3 class="label-form">Nombre de mam&acute;:</h3>
+                    <%= f.text_field :cp, class: 'input-form-style', placeholder: "Nombre de Mamá" %>
+                </div>
+                
+                <div class="col-xs-12">
                     <h3 class="label-form">Selecciona la caja a la que deseas suscribirte:</h3>
-                    <%= f.select :nombre, [['Munchie-mania','Munchie-mania'],['Infusion','Infusion'],['Lola Maria (toallas)', 'Lola Maria (toallas)'],['Lola Maria (tampones)', 'Lola Maria (tampones)']] %>
+                    <%= f.select :nombre, [['Madre mia (Collar con inicial)','Madre mia (Collar con inicial)'],['Madre mia (Brazalete Mama)','Madre mia (Brazalete Mama)']] %>
                 </div>
                 
                 <div class="col-xs-12" id="select-type">
                     <h3 class="label-form">Selecciona el tipo de compra:</h3>
-                    <%= f.select :suscription_type, [['Una sóla caja','One-time'],['Suscripción mensual (-20%)','Monthly']] %>
+                    <%= f.select :suscription_type, [['Una sóla caja','One-time']] %>
                 </div>
                 
                 <div class="col-xs-6">
                     <br>
                     <strong>Precio:</strong><br>
                     <strong>Envío:</strong><br>
-                    <strong>IVA:</strong><br>
                     <strong>Total:</strong>
                 </div>
                 <div class="col-xs-6" id="one-time-price">
                     <br>
-                    $245.00<br>
+                    $495.00<br>
                     ¡Gratis!<br>
-                    $39.20<br>
-                    $284.20
+                    $495.20
                 </div>
                 <div class="col-xs-6" id="monthly-price">
                     <br>
-                    $195.00<br>
+                    $495.00<br>
                     ¡Gratis!<br>
-                    $31.20<br>
-                    $226.20 / mes
+                    $495.00
                 </div>
                 
                 <div class="col-xs-12">

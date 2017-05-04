@@ -21,6 +21,10 @@ class SuscriptionsController < ApplicationController
         @suscription = Suscription.new 
     end
     
+    def newmamamia
+        @suscription = Suscription.new 
+    end
+    
     def create
         @suscription = Suscription.new(suscription_params)
         @suscription.shippingdate = 24
@@ -39,8 +43,17 @@ class SuscriptionsController < ApplicationController
                 if @suscription.nombre == "Infusion"
                     redirect_to "http://mpago.la/xgAi"
                 end
-                if @suscription.nombre == "Lola Maria"
+                if @suscription.nombre == "Lola Maria (toallas)"
                     redirect_to "http://mpago.la/Cv17"
+                end
+                if @suscription.nombre == "Lola Maria (tampones)"
+                    redirect_to "http://mpago.la/Cv17"
+                end
+                if @suscription.nombre == "Madre mia (Collar con inicial)"
+                    redirect_to "http://mpago.la/jGFA"
+                end
+                if @suscription.nombre == "Madre mia (Brazalete Mama)"
+                    redirect_to "http://mpago.la/jGFA"
                 end
             end
             if @suscription.suscription_type == "Monthly"
@@ -50,7 +63,10 @@ class SuscriptionsController < ApplicationController
                 if @suscription.nombre == "Infusion"
                     redirect_to "http://mpago.la/rG7d"
                 end
-                if @suscription.nombre == "Lola Maria"
+                if @suscription.nombre == "Lola Maria (toallas)"
+                    redirect_to "http://mpago.la/uVEn"
+                end
+                if @suscription.nombre == "Lola Maria (tampones)"
                     redirect_to "http://mpago.la/uVEn"
                 end
             end
